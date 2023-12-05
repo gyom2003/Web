@@ -1,5 +1,11 @@
-controllers:
-    resource:
-        path: ../src/Controller/
-        namespace: App\Controller
-    type: attribute
+# controllers:
+#     resource:
+#         path: ../src/Controller/
+#         namespace: App\Controller
+#     type: attribute
+
+
+
+main_page: 
+    path: /main
+    controller: App\Controller\MainController::renderFunc
