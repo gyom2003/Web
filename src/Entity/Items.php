@@ -8,6 +8,7 @@ use ApiPlatform\Metadata\ApiResource;
 
 #[ApiResource]
 #[ORM\Entity(repositoryClass: ItemsRepository::class)]
+
 class Items
 {
     #[ORM\Id]
@@ -27,13 +28,10 @@ class Items
     #[ORM\Column]
     public ?float $price = null;
 
-    #[ORM\Column(length: 255)]
-    
-
-    private $categoryRef = null;
-
     #[ORM\ManyToOne(inversedBy: 'categorymain')]
-    private ?Category $category_relation = null;
+
+    // #[ORM\Column(name: "category_relation" )]
+    public ?Category $category_relation = null;
 
     public function getCategory_id(): ?int
     {
@@ -88,17 +86,17 @@ class Items
         return $this;
     }
 
-    public function getCategoryRef()
-    {
-        return $this->categoryRef;
-    }
+    // public function getCategoryRef()
+    // {
+    //     return $this->categoryRef;
+    // }
 
-    public function setCategoryRef($categoryRef): static
-    {
-        $this->categoryRef = $categoryRef;
+    // public function setCategoryRef($categoryRef): static
+    // {
+    //     $this->categoryRef = $categoryRef;
 
-        return $this;
-    }
+    //     return $this;
+    // }
 
         public function setCategory_id(int $category_id): static
     {

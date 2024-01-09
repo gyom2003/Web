@@ -16,6 +16,8 @@ class Category
     private ?int $id = null;
 
     #[ORM\OneToMany(mappedBy: 'category_relation', targetEntity: Items::class)]
+
+    // #[ORM\Column(name: "categorymain" )]
     private Collection $categorymain;
 
     public function __construct()
@@ -28,9 +30,7 @@ class Category
         return $this->id;
     }
 
-    /**
-     * @return Collection<int, Items>
-     */
+  
     public function getCategorymain(): Collection
     {
         return $this->categorymain;
@@ -49,7 +49,6 @@ class Category
     public function removeCategorymain(Items $categorymain): static
     {
         if ($this->categorymain->removeElement($categorymain)) {
-            // set the owning side to null (unless already changed)
             if ($categorymain->getCategoryRelation() === $this) {
                 $categorymain->setCategoryRelation(null);
             }
