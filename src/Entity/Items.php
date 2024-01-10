@@ -5,9 +5,10 @@ namespace App\Entity;
 use App\Repository\ItemsRepository;
 use Doctrine\ORM\Mapping as ORM;
 use ApiPlatform\Metadata\ApiResource;
+use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 
-#[ApiResource]
 #[ORM\Entity(repositoryClass: ItemsRepository::class)]
+#[ApiResource]
 
 class Items
 {

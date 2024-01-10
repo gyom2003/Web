@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Création de compte</title>
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+</head>
+<body>
+    <main class="main2">
+        <h2 class ="acctxt">Connexion</h2>
+
+        <form class ="forminsc" action="/votre-page-de-traitement" method="post">
+            
+            <div class="forminsc2"></div>
+                <label for="username">Nom d'utilisateur:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+
+            <div class="forminsc2">
+                <label for="password">Mot de passe:</label>
+                <input type="password" id="password" name="password" required>
+            
+            </div>
+
+            <div class="flexdiv">
+                <button class="logout-btn2" type="submit">Se connecter</button>
+                <a href="/inscription" class="logout-btn3" type="submit">S'inscrire</a>
+            </div>
+            
+            
+        </form>
+    </main>
+
+</body>
+</html>

@@ -6,6 +6,23 @@
 
 
 
+# main_page: 
+#     path: /main
+#     controller: App\Controller\MainController::renderFunc
+
+
 main_page: 
     path: /main
-    controller: App\Controller\MainController::renderFunc
+    controller: App\Controller\MainController::main
+inscription_page: 
+    path: /inscription
+    controller: App\Controller\MainController::inscription
+login_page: 
+    path: /login
+    controller: App\Controller\MainController::login
+object_list_page: 
+    path: /category
+    controller: App\Controller\MainController::category
+object_page: 
+    path: /object
+    controller: App\Controller\MainController::object
